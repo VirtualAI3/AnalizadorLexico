@@ -23,7 +23,7 @@ def t_signo(t):
     return t
 t_ignore = ' \t\n'
 
-codigo = 'SeLECT col1,col2 from mi_Tabla wHERE col1 < 20'
+codigo = 'SeLECT 3col'
 lexer = lex.lex(debug=True)
 
 lexer.input(codigo)

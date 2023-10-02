@@ -31,8 +31,21 @@ where [Ww][Hh][Ee][Rr][Ee]
     printf("Numero: %s\n", yytext);
     // Aquí puedes realizar acciones adicionales si es necesario
 }
+[0-9]+([A-Za-z_])* {
+    printf("Token desconocido: %s\n", yytext);
+}
 . { printf("Token desconocido: %s\n", yytext); /* Manejar otros caracteres no reconocidos */ }
 %%
+int instalarID(){
+    /*Funcion para instalar el lexema en la tabla de simbolos 
+    y devolver un apuntador a esto; yytext apunta al primer
+    caracter y yylent es la longitud
+    */
+}
+int instalarNum(){
+    /*Similar a instalarID, pero coloca las
+    constantes numericas en una tabla separada*/
+}
 int main()
 {
     yyin = fopen("texto.txt", "r");
